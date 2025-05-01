@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${book.title}">Book Details</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container">
+    <h2 th:text="#{book.details}">Book Details</h2>
+    <div class="card">
+        <div class="card-body">
+            <h4 th:text="${book.title}">Title</h4>
+            <p><strong th:text="#{book.author}">Author:</strong> <span th:text="${book.author}">Author Name</span></p>
+            <p><strong th:text="#{book.price}">Price:</strong> <span th:text="${book.price} + ' $'">10.00 $</span></p>
+            <a th:href="@{/books}" class="btn btn-secondary" th:text="#{book.back}">Back to list</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
